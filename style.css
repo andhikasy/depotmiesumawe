@@ -1177,12 +1177,6 @@ body.dark-theme .bubble-tooltip::after {
 /* ==========================================
    THEME TOGGLE BUTTON
    ========================================== */
-.nav-right-area {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
 .theme-toggle-btn {
     background: none;
     border: none;
@@ -1210,9 +1204,8 @@ body.dark-theme .theme-toggle-btn:hover {
 }
 
 @media (max-width: 768px) {
-    .nav-right-area {
-        position: relative;
-        z-index: 1001;
+    .theme-toggle-btn {
+        margin: 16px auto 0;
     }
 }
 
