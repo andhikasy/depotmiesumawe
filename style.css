@@ -1508,3 +1508,63 @@ body.dark-theme .faq-question:hover {
     line-height: 1.6;
 }
 
+/* ==========================================
+   MOBILE CART RESPONSIVENESS (max-width: 576px)
+   ========================================== */
+@media (max-width: 576px) {
+    .sticky-cart-bar {
+        height: auto;
+        padding: 12px 0;
+    }
+    
+    .cart-bar-container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .cart-summary {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .cart-summary-text {
+        font-size: 0.95rem;
+    }
+    
+    .cart-summary-text strong {
+        font-size: 1.05rem;
+    }
+    
+    .cart-actions {
+        width: 100%;
+        gap: 8px;
+    }
+    
+    .cart-actions .btn {
+        flex: 1;
+        padding: 10px 8px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        justify-content: center;
+        gap: 4px;
+    }
+    
+    /* Push WhatsApp bubble up when cart is active on mobile */
+    body:has(.sticky-cart-bar.active) .whatsapp-bubble {
+        bottom: 115px;
+    }
+    
+    body:has(.sticky-cart-bar.active) {
+        padding-bottom: 115px;
+    }
+}
+
+/* Push WhatsApp bubble up when cart is active on desktop/tablet */
+@media (min-width: 577px) {
+    body:has(.sticky-cart-bar.active) .whatsapp-bubble {
+        bottom: 100px;
+    }
+}
+
