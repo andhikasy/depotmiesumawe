@@ -184,6 +184,12 @@ ul {
     color: var(--primary-red);
 }
 
+.nav-menu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .menu-toggle {
     display: none;
     background: none;
@@ -1204,8 +1210,8 @@ body.dark-theme .theme-toggle-btn:hover {
 }
 
 @media (max-width: 768px) {
-    .theme-toggle-btn {
-        margin: 16px auto 0;
+    .nav-menu-wrapper {
+        gap: 8px;
     }
 }
 
