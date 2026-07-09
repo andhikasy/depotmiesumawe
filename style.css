@@ -32,6 +32,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px; /* offset sticky navbar */
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -294,6 +296,47 @@ ul {
         width: calc(100% - 48px);
         margin: 16px 24px;
         text-align: center;
+    }
+
+    /* Hero Section Responsive */
+    .hero-section {
+        height: auto;
+        min-height: 500px;
+        padding-top: 120px;
+        padding-bottom: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.25;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0;
     }
 }
 
