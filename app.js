@@ -161,6 +161,21 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(waUrl, '_blank');
     });
 
+    // Clear Cart (Batal Pesan)
+    const cartClearBtn = document.getElementById('cart-clear-btn');
+    cartClearBtn.addEventListener('click', () => {
+        for (const item in cart) {
+            const qtySpans = document.querySelectorAll(`.cart-qty[data-name="${item}"]`);
+            qtySpans.forEach(span => {
+                span.textContent = 0;
+            });
+        }
+        cart = {};
+        cartBar.classList.remove('active');
+        cartCountBadge.textContent = 0;
+        cartTotalText.textContent = 'Rp 0';
+    });
+
 
     // ==========================================
     // 5. ACCORDION FAQ
